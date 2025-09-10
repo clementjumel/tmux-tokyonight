@@ -98,6 +98,7 @@ main() {
     terminal_icon=""
     terminal_icon_active=""
     terminal_icon_last="󰁯"
+    zoom_icon="󰁌"
 
     # Aggregating all commands into a single array
     local tmux_commands=()
@@ -134,9 +135,10 @@ main() {
     window_icon_current="#[fg=${green}]${terminal_icon_active}#[fg=${fg}]"
     window_number="#($SCRIPTS_PATH/custom-number.sh #I dsquare)"
     window_text="#W"
+    window_zoom="#{?window_zoomed_flag,${zoom_icon},}"
 
-    setw window-status-format "#[default] $window_icon $window_text $window_number  "
-    setw window-status-current-format "#[fg=${fg},bg=${bg_highlight}] $window_icon_current $window_text $window_number  "
+    setw window-status-format "#[default] $window_icon $window_text $window_number $window_zoom "
+    setw window-status-current-format "#[fg=${fg},bg=${bg_highlight}] $window_icon_current $window_text $window_number $window_zoom "
 
     # Call everything to action
     tmux "${tmux_commands[@]}"
