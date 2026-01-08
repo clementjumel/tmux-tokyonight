@@ -18,7 +18,7 @@ features and wanted to have less requirements. Besides, I wanted to support all 
    lines:
 
    ```tmux
-     set -g @plugin 'clementjumel/tmux-tokyonight'
+     set -g @plugin 'cjumel/tmux-tokyonight'
      set -g @tokyonight_theme 'night' # or 'moon', 'storm', 'day'
      ...
      set -g @plugin 'tmux-plugins/tpm'
