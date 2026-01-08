@@ -125,7 +125,7 @@ main() {
     set status-right-style ${none}
 
     set status-left "#[fg=${black},bg=${blue}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[nodim]#S "
-    set status-right " #[fg=${fg_sidebar},bg=${bg_statusline}]  #{user} 󰒋 #h #[fg=${black},bg=${blue}] 󱑒 %H:%M "
+    set status-right "#[fg=${black},bg=${blue}] 󰒋 #h "
 
     setw window-status-activity-style "underscore,fg=${fg_sidebar},bg=${bg_statusline}"
     setw window-status-separator ""
