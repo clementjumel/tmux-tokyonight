@@ -53,6 +53,7 @@ main() {
         fg_sidebar="#a9b1d6"
         green="#9ece6a"
         yellow="#e0af68"
+        orange="#ff9e64"
 
     elif [[ $theme == moon ]]; then
 
@@ -65,6 +66,7 @@ main() {
         fg_sidebar="#828bb8"
         green="#c3e88d"
         yellow="#ffc777"
+        orange="#ff966c"
 
     elif [[ $theme == storm ]]; then
 
@@ -77,6 +79,7 @@ main() {
         fg_sidebar="#a9b1d6"
         green="#9ece6a"
         yellow="#e0af68"
+        orange="#ff9e64"
 
     elif [[ $theme == day ]]; then
 
@@ -89,6 +92,7 @@ main() {
         fg_sidebar="#6172b0"
         green="#587539"
         yellow="#8c6c3e"
+        orange="#b15c00"
 
     fi
 
@@ -124,8 +128,8 @@ main() {
     set status-left-style ${none}
     set status-right-style ${none}
 
-    set status-left "#[fg=${black},bg=${blue}] #{?client_prefix,󰠠 ,#[dim]󰤂 }#[nodim]#S "
-    set status-right "#[fg=${black},bg=${blue}] 󰒋 #h "
+    set status-left "#[fg=${black}]#{?client_prefix,#[bg=${orange}] 󰠠,#[bg=${blue}] 󰤂} #S "
+    set status-right "#[fg=${black}]#{?client_prefix,#[bg=${orange}],#[bg=${blue}]} 󰒋 #h "
 
     setw window-status-activity-style "underscore,fg=${fg_sidebar},bg=${bg_statusline}"
     setw window-status-separator ""
